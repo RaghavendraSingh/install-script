@@ -11,6 +11,6 @@ echo $dockerId
 sudo mkdir -p /fileshare/stormlogs/$dockerId/
 
 sudo crontab -l > mycron
-sudo echo "30 00 * * * rsync -av /var/log/storm /fileshare/stormlogs/$dockerId/" >> mycron
+sudo echo "10 00 * * * rsync -av /var/log/storm /fileshare/stormlogs/$dockerId/" >> mycron
 sudo crontab mycron
 sudo rm mycron
