@@ -1,6 +1,6 @@
 bash docker-install.sh
 privateIp="$(hostname -i)"
-logDir=/var/log/storm/$privateIp
+logDir=/var/log/storm/$1/$privateIp
 bash mount-blob-container.sh $7 $8 $9 $logDir
 
 ADRR=(${3//,/ })
