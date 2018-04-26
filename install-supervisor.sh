@@ -1,10 +1,10 @@
 bash docker-install.sh
 privateIp="$(hostname -i)"
-logDir=/var/log/storm/$1/$privateIp
+logDir=/var/log/storm/
 bash mount-blob-container.sh $7 $8 $9 $logDir
-
+logDir=$logDir/$1/$privateIp
+mkdir -p $logDir
 ADRR=(${3//,/ })
-
 sudo docker login $4 --username="$5" --password="$6"
 
 #sudo mkdir -p /var/log/storm
