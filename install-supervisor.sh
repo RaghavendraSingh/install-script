@@ -3,7 +3,7 @@ privateIp="$(hostname -i)"
 logDir=/var/log/storm/
 bash mount-blob-container.sh $7 $8 $9 $logDir
 logDir=$logDir/$1/$privateIp
-mkdir -p $logDir
+sudo mkdir -p $logDir
 ADRR=(${3//,/ })
 sudo docker login $4 --username="$5" --password="$6"
 
