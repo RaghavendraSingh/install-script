@@ -10,10 +10,11 @@ chmod a+x /usr/bin/java
 chmod a+x /usr/bin/javac
 chmod a+x /usr/bin/javaws
 
-
+user=$1
+cd /home/$user
 wget https://archive.apache.org/dist/storm/apache-storm-1.1.0/apache-storm-1.1.0.tar.gz
 tar -zxvf apache-storm-1.1.0.tar.gz
 cd apache-storm-1.1.0/bin
 binPath="$(pwd)"
-echo "export PATH=$PATH:$binPath" >> ~/.bashrc
+echo "export PATH=$PATH:$binPath" >> /home/$user/.bashrc
 export PATH=$PATH:$binPath
