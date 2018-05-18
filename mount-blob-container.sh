@@ -11,4 +11,4 @@ echo "accountKey $2" >> fuse_connection.cfg
 echo "containerName $3" >> fuse_connection.cfg
 chmod 700 fuse_connection.cfg
 sudo mkdir -p $4
-sudo blobfuse $4 --tmp-path=/mnt/ramdisk/blobfusetmp  --config-file=fuse_connection.cfg -o attr_timeout=240 -o entry_timeout=240 -o negative_timeout=120
+sudo blobfuse $4 --tmp-path=/mnt/ramdisk/blobfusetmp  --config-file=fuse_connection.cfg -o attr_timeout=240 -o entry_timeout=240 -o allow_other -o negative_timeout=120 -o nonempty
