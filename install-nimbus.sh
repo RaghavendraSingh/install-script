@@ -1,5 +1,5 @@
-bash docker-install.sh
-
+#bash docker-install.sh
+apt-get -y update && apt-get -y install docker.io
 #sudo docker run -d --restart always -p 2181:2181 zookeeper
 
 ADRR=(${3//,/ })
