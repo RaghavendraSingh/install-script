@@ -12,7 +12,8 @@ sudo docker login $4 --username="$5" --password="$6"
 sudo docker pull $4/storm-docker:latest
 GRAPHITE_HOST=$11
 
-cores=$(nproc --all)
+#cores=$(nproc --all)
+cores=$(($(nproc --all)*2))
 worker_ports=""
 echo $cores
 for i in `seq 0 $cores`
