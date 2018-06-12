@@ -1,5 +1,5 @@
 #install java
-add-apt-repository ppa:openjdk-r/ppa
+add-apt-repository -y ppa:openjdk-r/ppa
 apt-get update
 apt-get install openjdk-8-jdk
 update-alternatives --config java
